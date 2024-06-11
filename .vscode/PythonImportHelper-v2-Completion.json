@@ -1,0 +1,312 @@
+[
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "SmallInteger",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Date",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "db_config",
+        "description": "db_config",
+        "isExtraImport": true,
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "db_config",
+        "description": "db_config",
+        "isExtraImport": true,
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "db_config",
+        "description": "db_config",
+        "isExtraImport": true,
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "db_config",
+        "description": "db_config",
+        "isExtraImport": true,
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "isExtraImport": true,
+        "detail": "routes_usuario",
+        "documentation": {}
+    },
+    {
+        "label": "UsuarioRequest",
+        "importPath": "db_user",
+        "description": "db_user",
+        "isExtraImport": true,
+        "detail": "db_user",
+        "documentation": {}
+    },
+    {
+        "label": "UsuarioResponse",
+        "importPath": "db_user",
+        "description": "db_user",
+        "isExtraImport": true,
+        "detail": "db_user",
+        "documentation": {}
+    },
+    {
+        "label": "Usuario",
+        "importPath": "db_user",
+        "description": "db_user",
+        "isExtraImport": true,
+        "detail": "db_user",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "db_config",
+        "description": "db_config",
+        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "kind": 5,
+        "importPath": "db_config",
+        "description": "db_config",
+        "peekOfCode": "SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\n#get_db função para acessar o banco de dados\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "db_config",
+        "description": "db_config",
+        "peekOfCode": "Base = declarative_base()\n#get_db função para acessar o banco de dados\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "db_config",
+        "documentation": {}
+    },
+    {
+        "label": "Usuario",
+        "kind": 6,
+        "importPath": "db_user",
+        "description": "db_user",
+        "peekOfCode": "class Usuario(Base):\n    __tablename__='usuarios'\n    id=Column('id',SmallInteger, primary_key=True, autoincrement=True)\n    nome=Column('nome',String(16))\n    email=Column('email',String(50))\n    telefone=Column('telefone',String(12))\n    dt_nasc=Column('dt_nasc', Date)\n#schemas-utilizar para response e request\nclass UsuarioResponse(BaseModel):\n    id: int",
+        "detail": "db_user",
+        "documentation": {}
+    },
+    {
+        "label": "UsuarioResponse",
+        "kind": 6,
+        "importPath": "db_user",
+        "description": "db_user",
+        "peekOfCode": "class UsuarioResponse(BaseModel):\n    id: int\n    nome: str\n    email: str\n    telefone: str\n    dt_nasc: date\n    class Config:\n        from_attributes=True\nclass UsuarioRequest(BaseModel):\n    nome:str",
+        "detail": "db_user",
+        "documentation": {}
+    },
+    {
+        "label": "UsuarioRequest",
+        "kind": 6,
+        "importPath": "db_user",
+        "description": "db_user",
+        "peekOfCode": "class UsuarioRequest(BaseModel):\n    nome:str\n    email: str\n    telefone: str\n    dt_nasc:date",
+        "detail": "db_user",
+        "documentation": {}
+    },
+    {
+        "label": "helloworld",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def helloworld():\n    return 'Hello World'\napp.include_router(router1)\nif __name__=='__main__':\n    import uvicorn\n    uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=8003, reload=True)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "origins = [\"*\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n@app.get(\"/helloworld\")\ndef helloworld():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "buscar",
+        "kind": 2,
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "peekOfCode": "def buscar(db:Session=Depends(get_db)):\n    usuarios_on_db=db.query(Usuario).all()\n    lista=[]\n    for usuario_unico in usuarios_on_db:\n        lista.append(UsuarioResponse.model_validate(usuario_unico))\n    return lista\n@router.get(\"/buscar/{id}\")#Read\ndef buscarId(id:int, db:Session=Depends(get_db)):\n    usuario_on_db=db.query(Usuario).filter(Usuario.id==id).first()\n    if usuario_on_db is None:",
+        "detail": "routes_usuario",
+        "documentation": {}
+    },
+    {
+        "label": "buscarId",
+        "kind": 2,
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "peekOfCode": "def buscarId(id:int, db:Session=Depends(get_db)):\n    usuario_on_db=db.query(Usuario).filter(Usuario.id==id).first()\n    if usuario_on_db is None:\n        return Response(content='Usuário não encontrado',status_code=404)\n    return UsuarioResponse.model_validate(usuario_on_db)\n@router.get(\"/buscar/nome/{username}\")#Read\ndef buscarNome(username:str, db:Session=Depends(get_db)):\n    usuarios_on_db=db.query(Usuario).filter(Usuario.nome==username).all()\n    lista=[]\n    for usuario_unico in usuarios_on_db:",
+        "detail": "routes_usuario",
+        "documentation": {}
+    },
+    {
+        "label": "buscarNome",
+        "kind": 2,
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "peekOfCode": "def buscarNome(username:str, db:Session=Depends(get_db)):\n    usuarios_on_db=db.query(Usuario).filter(Usuario.nome==username).all()\n    lista=[]\n    for usuario_unico in usuarios_on_db:\n        lista.append(UsuarioResponse.model_validate(usuario_unico))\n    return lista\n@router.delete(\"/apagar/{id}\")#Delete\ndef apagarId(id, db:Session=Depends(get_db)):\n    usuario_on_db=db.query(Usuario).filter(Usuario.id==id).first()\n    if usuario_on_db is None:",
+        "detail": "routes_usuario",
+        "documentation": {}
+    },
+    {
+        "label": "apagarId",
+        "kind": 2,
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "peekOfCode": "def apagarId(id, db:Session=Depends(get_db)):\n    usuario_on_db=db.query(Usuario).filter(Usuario.id==id).first()\n    if usuario_on_db is None:\n        return Response(content='Usuário não encontrado',status_code=404)\n    db.delete(usuario_on_db)\n    db.commit()\n@router.post(\"/inserir\")#Create\ndef inserir(request:UsuarioRequest, db:Session=Depends(get_db)):\n    rDici=request.model_dump()\n    db.add(Usuario(**rDici))",
+        "detail": "routes_usuario",
+        "documentation": {}
+    },
+    {
+        "label": "inserir",
+        "kind": 2,
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "peekOfCode": "def inserir(request:UsuarioRequest, db:Session=Depends(get_db)):\n    rDici=request.model_dump()\n    db.add(Usuario(**rDici))\n    db.commit()\n    return rDici\n@router.put(\"/atualizar/{id}\")#Update\ndef atualizarId(id, request:UsuarioRequest, db:Session=Depends(get_db)):\n    usuario_antigo=db.query(Usuario).filter(Usuario.id==id).first()\n    if usuario_antigo is None:\n        return Response(content='Usuário não encontrado',status_code=404)",
+        "detail": "routes_usuario",
+        "documentation": {}
+    },
+    {
+        "label": "atualizarId",
+        "kind": 2,
+        "importPath": "routes_usuario",
+        "description": "routes_usuario",
+        "peekOfCode": "def atualizarId(id, request:UsuarioRequest, db:Session=Depends(get_db)):\n    usuario_antigo=db.query(Usuario).filter(Usuario.id==id).first()\n    if usuario_antigo is None:\n        return Response(content='Usuário não encontrado',status_code=404)\n    db.merge(Usuario(id=id, **request.model_dump()))\n    db.commit()\n    usuario_novo=db.query(Usuario).filter(Usuario.id==id).first()\n    return usuario_novo",
+        "detail": "routes_usuario",
+        "documentation": {}
+    }
+]
