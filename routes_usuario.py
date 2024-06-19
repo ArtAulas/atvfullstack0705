@@ -11,10 +11,11 @@ router=APIRouter(prefix='/usuarios')
 @router.get("/buscar")#Read
 def buscar(db:Session=Depends(get_db)):
     usuarios_on_db=db.query(Usuario).all()
-    lista=[]
-    for usuario_unico in usuarios_on_db:
-        lista.append(UsuarioResponse.model_validate(usuario_unico))
-    return lista
+    #lista=[]
+    #for usuario_unico in usuarios_on_db:
+    #    lista.append(UsuarioResponse.model_validate(usuario_unico))
+    #return lista
+    return [UsuarioResponse.model_validate(usuario_unico) for usuario_unico in usuarios_on_db]
 
 @router.get("/buscar/{id}")#Read
 def buscarId(id:int, db:Session=Depends(get_db)):
@@ -23,13 +24,18 @@ def buscarId(id:int, db:Session=Depends(get_db)):
         return Response(content='Usuário não encontrado',status_code=404)
     return UsuarioResponse.model_validate(usuario_on_db)
 
-@router.get("/buscar/nome/{username}")#Read
-def buscarNome(username:str, db:Session=Depends(get_db)):
-    usuarios_on_db=db.query(Usuario).filter(Usuario.nome==username).all()
-    lista=[]
-    for usuario_unico in usuarios_on_db:
-        lista.append(UsuarioResponse.model_validate(usuario_unico))
-    return lista
+@router.get("/buscar/email/{email}")#Read
+def buscarEmail(email:str, db:Session=Depends(get_db)):
+    print(email)
+    usuario_on_db=db.query(Usuario).filter(Usuario.email==email).first()
+    if usuario_on_db is None:
+        return Response(content='Usuário não encontrado',status_code=404)
+    return UsuarioResponse.model_validate(usuario_on_db)
+
+@router.get("/buscar/email_id/{email}")#Read
+def buscarIdEmail(email:str, db:Session=Depends(get_db)):
+    usuario_db=db.query(Usuario).filter(Usuario.email==email).first()
+    return UsuarioResponse.model_validate(usuario_db)
 
 @router.delete("/apagar/{id}")#Delete
 def apagarId(id, db:Session=Depends(get_db)):

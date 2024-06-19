@@ -8,7 +8,7 @@ class Usuario(Base):
     __tablename__='usuarios'
     id=Column('id',SmallInteger, primary_key=True, autoincrement=True)
     nome=Column('nome',String(16))
-    email=Column('email',String(50))
+    email=Column('email',String(50), unique=True)
     telefone=Column('telefone',String(12))
     dt_nasc=Column('dt_nasc', Date)
 
